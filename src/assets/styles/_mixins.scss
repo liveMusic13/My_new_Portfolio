@@ -1,0 +1,186 @@
+@import './variables';
+
+@mixin content(
+	$fz-text,
+	$fz-h2,
+	$w-view,
+	$h-view,
+	$b_w-view,
+	$b_h-view,
+	$fz-logo,
+	$pad-logo,
+	$img-w,
+	$img-h,
+	$fz-view,
+	$button-display,
+	$view-display,
+	$padding-h2-and-view,
+	$block__padding-h2-and-view,
+	$fz-h2-menu
+) {
+	> .page__name {
+		font-weight: 700;
+		font-style: italic;
+		font-size: $fz-logo;
+		padding: 20% 0px 0px 20%;
+
+		> span {
+			padding-left: $pad-logo;
+		}
+	}
+
+	> .text {
+		padding-top: 23%;
+		font-size: $fz-text;
+	}
+
+	> .page__prof {
+		color: $color_one;
+		font-weight: 700;
+		font-size: $fz-h2;
+		padding: $padding-h2-and-view 0px 0px 20%;
+	}
+
+	> .block_h2 {
+		padding: $block__padding-h2-and-view 0px 0px 20%;
+		.page__prof {
+			color: $color_one;
+			font-weight: 700;
+			font-size: $fz-h2;
+		}
+
+		> ul {
+			padding-top: 4%;
+			padding-left: 5%;
+
+			> li {
+				margin-bottom: 2%;
+				font-size: $fz-h2-menu;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+				> a {
+					color: $color_two;
+
+					&:hover {
+						color: $color_one;
+						border-bottom: 1px solid $color_one;
+					}
+				}
+			}
+		}
+	}
+
+	> .page__block-view {
+		justify-self: end;
+		padding: $padding-h2-and-view 20% 0px 0px;
+
+		> .view {
+			display: $view-display;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			background-color: $color_one;
+			width: $w-view;
+			height: $h-view;
+			border-radius: 5px;
+
+			> p {
+				font-size: $fz-view;
+				font-style: italic;
+				color: $background_two;
+			}
+
+			> .view__text {
+			}
+			> .svg {
+				width: $img-w;
+				height: $img-h;
+				margin-bottom: 5px;
+			}
+		}
+
+		> button {
+			display: $button-display;
+			border-radius: 3px;
+			margin-top: 10px;
+			width: $b_w-view;
+			height: $b_h-view;
+			background-color: $background_start-button;
+			animation: buttonBlink 3s linear infinite;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+
+	> .wrapper_view {
+		justify-self: end;
+		padding: $block__padding-h2-and-view 20% 0px 0px;
+
+		> .page__block-view {
+			> .view {
+				display: $view-display;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				background-color: $color_one;
+				width: $w-view;
+				height: $h-view;
+				border-radius: 5px;
+
+				> p {
+					font-size: $fz-view;
+					font-style: italic;
+					color: $background_two;
+				}
+
+				> .view__text {
+				}
+				> .svg {
+					width: $img-w;
+					height: $img-h;
+					margin-bottom: 5px;
+				}
+			}
+
+			> button {
+				display: $button-display;
+				border-radius: 3px;
+				margin-top: 10px;
+				width: $b_w-view;
+				height: $b_h-view;
+				background-color: $background_start-button;
+				animation: buttonBlink 3s linear infinite;
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+@mixin arrow-next($top, $left, $fz, $rotate, $width, $pad-bot) {
+	position: absolute;
+	top: $top;
+	left: $left;
+	background-color: $color_two;
+	color: $background_two;
+	width: $width;
+	text-align: center;
+	transform: rotate($rotate);
+	padding-bottom: $pad-bot;
+	font-size: $fz;
+
+	&:hover {
+		cursor: pointer;
+		animation: arrowBorderRadius 400ms linear 1;
+		border-radius: 20px;
+	}
+	&:not(:hover) {
+		animation: arrowBorderRadiusReset 400ms linear 1;
+	}
+}

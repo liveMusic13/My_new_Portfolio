@@ -1,0 +1,133 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/animations';
+
+.wrapper {
+	// height: 99vh;
+
+	display: grid;
+	grid-template-columns: 62% 38%;
+	height: 100%;
+
+	> .main {
+		border: 1px solid $color_two;
+		aspect-ratio: 1/1;
+		// height: 100%;
+	}
+
+	> .block__next {
+		display: grid;
+		grid-template-rows: 62% 38%;
+
+		> .next {
+			border: 1px solid $color_two;
+			aspect-ratio: 1/1;
+
+			&:hover {
+				animation: borderRadius 400ms linear 1;
+				border-radius: 6%;
+			}
+
+			&:not(:hover) {
+				animation: borderRadiusReset 400ms linear 1;
+			}
+		}
+
+		> .block__three {
+			display: grid;
+			grid-template-columns: 39% 61%;
+
+			> .three__next {
+				border: 1px solid $color_two;
+				aspect-ratio: 1/1;
+
+				&:hover {
+					animation: borderRadius 400ms linear 1;
+					border-radius: 6%;
+				}
+
+				&:not(:hover) {
+					animation: borderRadiusReset 400ms linear 1;
+				}
+			}
+
+			> .block__four {
+				display: grid;
+				grid-template-rows: 37% 62%;
+
+				> .four__next {
+					border: 1px solid $color_two;
+					aspect-ratio: 1/1;
+
+					&:hover {
+						animation: borderRadius 400ms linear 1;
+						border-radius: 6%;
+					}
+
+					&:not(:hover) {
+						animation: borderRadiusReset 400ms linear 1;
+					}
+				}
+
+				> .block__five {
+					display: grid;
+					grid-template-columns: 57% 43%;
+
+					> .five__next {
+						border: 1px solid $color_two;
+						aspect-ratio: 1/1;
+
+						&:hover {
+							animation: borderRadius 400ms linear 1;
+							border-radius: 6%;
+						}
+
+						&:not(:hover) {
+							animation: borderRadiusReset 400ms linear 1;
+						}
+					}
+
+					> .block__six {
+						display: grid;
+						grid-template-rows: 74% 26%;
+
+						> .six__next {
+							border: 1px solid $color_two;
+							aspect-ratio: 1/1;
+
+							&:hover {
+								animation: borderRadius 400ms linear 1;
+								border-radius: 6%;
+							}
+
+							&:not(:hover) {
+								animation: borderRadiusReset 400ms linear 1;
+							}
+						}
+
+						> .block__seven {
+							display: grid;
+							grid-template-columns: 66% 34%;
+
+							> .seven__next {
+								border: 1px solid $color_two;
+								aspect-ratio: 1/1;
+
+								&:hover {
+									animation: borderRadius 400ms linear 1;
+									border-radius: 6%;
+								}
+
+								&:not(:hover) {
+									animation: borderRadiusReset 400ms linear 1;
+								}
+							}
+
+							> .block__all {
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

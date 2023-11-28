@@ -1,0 +1,57 @@
+@keyframes animNext {
+	from {
+		transform: rotate(0);
+	}
+
+	to {
+		transform: rotate(-90deg);
+	}
+}
+
+@keyframes buttonBlink {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes borderRadius {
+	from {
+		border-radius: 0%;
+	}
+	to {
+		border-radius: 6%;
+	}
+}
+
+@keyframes borderRadiusReset {
+	from {
+		border-radius: 6%;
+	}
+	to {
+		border-radius: 0%;
+	}
+}
+
+@keyframes arrowBorderRadius {
+	from {
+		border-radius: 0%;
+	}
+	to {
+		border-radius: 20px;
+	}
+}
+
+@keyframes arrowBorderRadiusReset {
+	from {
+		border-radius: 20px;
+	}
+	to {
+		border-radius: 0%;
+	}
+}
