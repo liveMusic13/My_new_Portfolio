@@ -4,7 +4,7 @@ import useStyle from '../../hooks/useStyle';
 import styles from './Content.module.scss';
 
 const Content: FC = ({ info, section, arrColor }) => {
-	const { colorH2, colorText, colorBorder } = useStyle();
+	const { colorH2, colorText, colorBorder, roadColor } = useStyle();
 
 	return (
 		<div
@@ -26,7 +26,10 @@ const Content: FC = ({ info, section, arrColor }) => {
 				{ [styles['wrapper__seven_next']]: section === 'seven__next' }
 			)}
 		>
-			<h1 className={styles[`page__name`]}>
+			<h1
+				className={styles[`page__name`]}
+				style={{ color: colorText(arrColor) }}
+			>
 				{info.pageName === 'start-page' ? (
 					<>
 						Дмитрий <br />
@@ -121,7 +124,7 @@ const Content: FC = ({ info, section, arrColor }) => {
 								cy='12.952'
 								r='3.383'
 							></circle>
-							<g className='js-eye-lid' fill={colorViewImage(arrColor)}>
+							<g className='js-eye-lid' fill={colorBorder(arrColor)}>
 								<g>
 									<path d='M16.828,26.39C8.911,26.39,4.989,17.25,0,16.76v16.896h33.656V16.76 C28.667,17.25,24.745,26.39,16.828,26.39z'></path>
 								</g>
@@ -130,7 +133,10 @@ const Content: FC = ({ info, section, arrColor }) => {
 								</g>
 							</g>
 						</svg>
-						<p style={colorViewText(arrColor)} className={styles.view__text}>
+						<p
+							style={{ color: roadColor(arrColor) }}
+							className={styles.view__text}
+						>
 							Посмотреть
 						</p>
 					</div>
@@ -144,69 +150,6 @@ const Content: FC = ({ info, section, arrColor }) => {
 				)}
 			</div>
 
-			{/* {info.pageName !== 'about-me' ? (
-				<div className={styles[`page__block-view`]}>
-					{info.pageName !== 'start-page' ? (
-						<div style={colorView(arrColor)} className={styles.view}>
-							<svg
-								className={styles.svg}
-								x='0px'
-								y='0px'
-								viewBox='0 0 33.656 33.656'
-								enableBackground='new 0 0 33.656 33.656'
-								xmlSpace='preserve'
-							>
-								<circle fill='#fff' cx='16.828' cy='16.828' r='16.828'></circle>
-								<circle
-									className='js-eye-retina'
-									fill='#DC5141'
-									cx='16.828'
-									cy='16.828'
-									r='9.003'
-									style={{
-										fill: 'rgb(11, 11, 11)',
-									}}
-								></circle>
-								<circle
-									className='js-eye-pupil'
-									fill='#3A3C43'
-									cx='16.828'
-									cy='16.828'
-									r='5.892'
-									style={{
-										fill: 'rgb(255, 218, 68)',
-									}}
-								></circle>
-								<circle
-									className='js-eye-highlight'
-									fill='#FFFFFF'
-									cx='21.342'
-									cy='12.952'
-									r='3.383'
-								></circle>
-								<g className='js-eye-lid' fill={colorViewImage(arrColor)}>
-									<g>
-										<path d='M16.828,26.39C8.911,26.39,4.989,17.25,0,16.76v16.896h33.656V16.76 C28.667,17.25,24.745,26.39,16.828,26.39z'></path>
-									</g>
-									<g>
-										<path d='M16.828,7.266c-7.917,0-11.839,9.139-16.828,9.63V0h33.656v16.896 C28.667,16.406,24.745,7.266,16.828,7.266z'></path>
-									</g>
-								</g>
-							</svg>
-							<p style={colorViewText(arrColor)} className={styles.view__text}>
-								Посмотреть
-							</p>
-						</div>
-					) : (
-						<>
-							<div className={styles.view}>
-								<p>Далее</p>
-							</div>
-							<button>&#8658;</button>
-						</>
-					)}
-				</div>
-			) */}
 			<div className={styles.arrow__next}>&#10230;</div>
 		</div>
 	);

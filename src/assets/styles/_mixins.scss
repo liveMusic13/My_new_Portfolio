@@ -15,7 +15,6 @@
 	$button-display,
 	$view-display,
 	$padding-h2-and-view,
-	$block__padding-h2-and-view,
 	$fz-h2-menu
 ) {
 	> .page__name {
@@ -38,11 +37,14 @@
 		color: $color_one;
 		font-weight: 700;
 		font-size: $fz-h2;
-		padding: $padding-h2-and-view 0px 0px 20%;
+		padding: 0px 0px 20% 20%;
+		align-self: center;
 	}
 
 	> .block_h2 {
-		padding: $block__padding-h2-and-view 0px 0px 20%;
+		padding: 0px 0px 20% 20%;
+		align-self: center;
+
 		.page__prof {
 			color: $color_one;
 			font-weight: 700;
@@ -74,7 +76,8 @@
 
 	> .page__block-view {
 		justify-self: end;
-		padding: $padding-h2-and-view 20% 0px 0px;
+		padding: 0px 20% 20% 0px;
+		align-self: center;
 
 		> .view {
 			display: $view-display;
@@ -115,58 +118,12 @@
 			}
 		}
 	}
-
-	// > .wrapper_view {
-	// 	justify-self: end;
-	// 	padding: $block__padding-h2-and-view 20% 0px 0px;
-
-	// 	> .page__block-view {
-	// 		> .view {
-	// 			display: $view-display;
-	// 			flex-direction: column;
-	// 			align-items: center;
-	// 			justify-content: center;
-	// 			background-color: $color_one;
-	// 			width: $w-view;
-	// 			height: $h-view;
-	// 			border-radius: 5px;
-
-	// 			> p {
-	// 				font-size: $fz-view;
-	// 				font-style: italic;
-	// 				color: $background_two;
-	// 			}
-
-	// 			> .view__text {
-	// 			}
-	// 			> .svg {
-	// 				width: $img-w;
-	// 				height: $img-h;
-	// 				margin-bottom: 5px;
-	// 			}
-	// 		}
-
-	// 		> button {
-	// 			display: $button-display;
-	// 			border-radius: 3px;
-	// 			margin-top: 10px;
-	// 			width: $b_w-view;
-	// 			height: $b_h-view;
-	// 			background-color: $background_start-button;
-	// 			animation: buttonBlink 3s linear infinite;
-
-	// 			&:hover {
-	// 				cursor: pointer;
-	// 			}
-	// 		}
-	// 	}
-	// }
 }
 
-@mixin arrow-next($top, $left, $fz, $rotate, $width, $pad-bot) {
+@mixin arrow-next($fz, $rotate, $width, $pad-bot) {
 	position: absolute;
-	top: $top;
-	left: $left;
+	top: 80%;
+	left: 75%;
 	background-color: $color_two;
 	color: $background_two;
 	width: $width;

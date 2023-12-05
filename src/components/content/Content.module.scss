@@ -7,6 +7,8 @@
 	grid-template-columns: repeat(2, 1fr);
 	justify-content: space-between;
 
+	aspect-ratio: 1/1;
+
 	> div.arrow__next {
 		display: none;
 	}
@@ -40,8 +42,6 @@
 		//block-view
 		70%,
 		//padding-h2-and-view
-		40%,
-		//block__padding-h2-and-view
 		1em //fontSize-h2-menu
 	);
 }
@@ -51,26 +51,26 @@
 	grid-template-columns: repeat(2, 1fr);
 	justify-content: space-between;
 	position: relative;
+	aspect-ratio: 1/1;
 
-	// > div.arrow__next {
-	// 	@include arrow-next(85%, 80%, 1em, -90deg, 8vw, 0.15%);
-	// }
+	> div.arrow__next {
+		@include arrow-next(1em, -90deg, 8vw, 0.15%);
+	}
 
 	@include content(
-		0.6em,
-		1.6em,
+		0.55em,
+		1.4em,
 		3em,
 		7.5em,
 		4em,
 		0.89em,
-		1.26em,
+		1.06em,
 		1.46em,
 		2.1em,
 		2.1em,
 		0.4em,
 		$button-display-false,
 		$view-display-false,
-		70%,
 		70%,
 		0.6em
 	);
@@ -81,26 +81,26 @@
 	grid-template-columns: repeat(2, 1fr);
 	justify-content: space-between;
 	position: relative;
+	aspect-ratio: 1/1;
 
-	// > div.arrow__next {
-	// 	@include arrow-next(70%, 80%, 0.8em, -90deg, 4vw, 0.15%);
-	// }
+	> div.arrow__next {
+		@include arrow-next(0.8em, -90deg, 4vw, 0.15%);
+	}
 
 	@include content(
-		0.4em,
+		0.3em,
 		1em,
 		3.8em,
 		7.7em,
 		5.4em,
 		0.69em,
-		1.06em,
+		0.8em,
 		1.16em,
 		1.9em,
 		1.9em,
 		0.3em,
 		$button-display-false,
 		$view-display-false,
-		70%,
 		70%,
 		0.4em
 	);
@@ -111,26 +111,26 @@
 	grid-template-columns: repeat(2, 1fr);
 	justify-content: space-between;
 	position: relative;
+	aspect-ratio: 1/1;
 
-	// > div.arrow__next {
-	// 	@include arrow-next(85%, 68%, 0.5em, -90deg, 2.5vw, 0.15%);
-	// }
+	> div.arrow__next {
+		@include arrow-next(0.5em, -90deg, 2.5vw, 0.15%);
+	}
 
 	@include content(
-		0.24em,
-		0.8em,
+		0.2em,
+		0.7em,
 		3.7em,
 		7.6em,
 		5.3em,
 		0.59em,
-		0.86em,
+		0.6em,
 		0.96em,
 		1.7em,
 		1.7em,
 		0.2em,
 		$button-display-false,
 		$view-display-false,
-		70%,
 		70%,
 		0.24em
 	);
@@ -141,26 +141,26 @@
 	grid-template-columns: repeat(2, 1fr);
 	justify-content: space-between;
 	position: relative;
+	aspect-ratio: 1/1;
 
-	// > div.arrow__next {
-	// 	@include arrow-next(100%, 85%, 0.3em, -90deg, 1.5vw, 0.06%);
-	// }
+	> div.arrow__next {
+		@include arrow-next(0.3em, -90deg, 1.5vw, 0.06%);
+	}
 
 	@include content(
 		0.14em,
-		0.6em,
+		0.5em,
 		3.2em,
 		7em,
 		4.6em,
 		0.39em,
-		0.66em,
+		0.4em,
 		0.76em,
 		1.5em,
 		1.5em,
 		0.1em,
 		$button-display-false,
 		$view-display-false,
-		70%,
 		70%,
 		0.14em
 	);
@@ -171,26 +171,26 @@
 	grid-template-columns: repeat(2, 1fr);
 	justify-content: space-between;
 	position: relative;
+	aspect-ratio: 1/1;
 
-	// > div.arrow__next {
-	// 	@include arrow-next(88%, 91%, 0.2em, -90deg, 1vw, 0.06%);
-	// }
+	> div.arrow__next {
+		@include arrow-next(0.2em, -90deg, 1vw, 0.06%);
+	}
 
 	@include content(
 		0.1em,
-		0.4em,
+		0.35em,
 		0.7em,
 		1.4em,
 		4em,
 		0.29em,
-		0.5em,
+		0.25em,
 		0.46em,
 		1.2em,
 		1.2em,
 		0.09em,
 		$button-display-false,
 		$view-display-false,
-		70%,
 		70%,
 		0.1em
 	);
@@ -201,26 +201,26 @@
 	grid-template-columns: repeat(2, 1fr);
 	justify-content: space-between;
 	position: relative;
+	aspect-ratio: 1/1;
 
-	// > div.arrow__next {
-	// 	@include arrow-next(64%, 74%, 0.1em, -90deg, 0.5vw, 0%);
-	// }
+	> div.arrow__next {
+		@include arrow-next(0.1em, -90deg, 0.5vw, 0%);
+	}
 
 	@include content(
 		0.02em,
-		0.2em,
+		0.15em,
 		0.5em,
 		1em,
 		3.5em,
 		0.19em,
-		0.36em,
+		0.1em,
 		0.26em,
 		0.8em,
 		0.8em,
 		0.07em,
 		$button-display-false,
 		$view-display-false,
-		70%,
 		70%,
 		0.02em
 	);
