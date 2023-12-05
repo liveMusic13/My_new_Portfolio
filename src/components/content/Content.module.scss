@@ -11,8 +11,6 @@
 		display: none;
 	}
 
-	// height: 99vh;
-
 	@include content(
 		1em,
 		//text
@@ -53,12 +51,10 @@
 	grid-template-columns: repeat(2, 1fr);
 	justify-content: space-between;
 	position: relative;
-	// padding-left: 25%;
-	// height: 99vh;
 
-	> div.arrow__next {
-		@include arrow-next(85%, 80%, 1em, -90deg, 8vw, 0.15%);
-	}
+	// > div.arrow__next {
+	// 	@include arrow-next(85%, 80%, 1em, -90deg, 8vw, 0.15%);
+	// }
 
 	@include content(
 		0.6em,
@@ -80,18 +76,15 @@
 	);
 }
 
-.wrapper__allPage__next {
+.wrapper__three_next {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	justify-content: space-between;
-	padding-bottom: 25%;
 	position: relative;
 
-	> div.arrow__next {
-		@include arrow-next(70%, 80%, 0.8em, -90deg, 4vw, 0.15%);
-	}
-
-	// height: 99vh;
+	// > div.arrow__next {
+	// 	@include arrow-next(70%, 80%, 0.8em, -90deg, 4vw, 0.15%);
+	// }
 
 	@include content(
 		0.4em,
@@ -113,20 +106,15 @@
 	);
 }
 
-.wrapper__allPage_three__next {
+.wrapper__four_next {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	justify-content: space-between;
-	width: 95%;
-	padding-right: 10%;
-	padding-bottom: 20%;
 	position: relative;
 
-	> div.arrow__next {
-		@include arrow-next(85%, 68%, 0.5em, -90deg, 2.5vw, 0.15%);
-	}
-
-	// height: 99vh;
+	// > div.arrow__next {
+	// 	@include arrow-next(85%, 68%, 0.5em, -90deg, 2.5vw, 0.15%);
+	// }
 
 	@include content(
 		0.24em,
@@ -148,17 +136,15 @@
 	);
 }
 
-.wrapper__allPage_four__next {
+.wrapper__five_next {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	justify-content: space-between;
-	width: 95%;
 	position: relative;
-	// height: 99vh;
 
-	> div.arrow__next {
-		@include arrow-next(100%, 85%, 0.3em, -90deg, 1.5vw, 0.06%);
-	}
+	// > div.arrow__next {
+	// 	@include arrow-next(100%, 85%, 0.3em, -90deg, 1.5vw, 0.06%);
+	// }
 
 	@include content(
 		0.14em,
@@ -180,18 +166,15 @@
 	);
 }
 
-.wrapper__allPage_five__next {
+.wrapper__six_next {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	justify-content: space-between;
-	padding-left: 20%;
 	position: relative;
 
-	> div.arrow__next {
-		@include arrow-next(88%, 91%, 0.2em, -90deg, 1vw, 0.06%);
-	}
-
-	// height: 99vh;
+	// > div.arrow__next {
+	// 	@include arrow-next(88%, 91%, 0.2em, -90deg, 1vw, 0.06%);
+	// }
 
 	@include content(
 		0.1em,
@@ -213,17 +196,15 @@
 	);
 }
 
-.wrapper__allPage_six__next {
+.wrapper__seven_next {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	justify-content: space-between;
 	position: relative;
 
-	> div.arrow__next {
-		@include arrow-next(64%, 74%, 0.1em, -90deg, 0.5vw, 0%);
-	}
-
-	// height: 99vh;
+	// > div.arrow__next {
+	// 	@include arrow-next(64%, 74%, 0.1em, -90deg, 0.5vw, 0%);
+	// }
 
 	@include content(
 		0.02em,

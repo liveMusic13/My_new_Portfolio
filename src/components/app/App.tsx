@@ -1,6 +1,7 @@
 import { FC, useEffect, useState } from 'react';
 import dataPageInfo from '../../dataPageInfo';
 import useStyle from '../../hooks/useStyle';
+import Content from '../content/Content';
 import styles from './App.module.scss';
 
 const App: FC = () => {
@@ -53,11 +54,11 @@ const App: FC = () => {
 					borderColor: colorBorder(arrColor),
 				}}
 			>
-				{/* <Content
+				<Content
 					arrColor={arrColor}
 					section='main'
 					info={dataPageInfo[arrPage[0]]}
-				/> */}
+				/>
 			</div>
 			<div
 				className={styles.block__next}
@@ -77,7 +78,13 @@ const App: FC = () => {
 						backgroundColor: roadColor(arrColor),
 						borderColor: colorBorder(arrColor),
 					}}
-				></div>
+				>
+					<Content
+						arrColor={arrColor}
+						section='next'
+						info={dataPageInfo[arrPage[1]]}
+					/>
+				</div>
 				<div className={styles.block__three}>
 					<div className={styles.block__four}>
 						<div className={styles.block__five}>
@@ -87,7 +94,13 @@ const App: FC = () => {
 									backgroundColor: roadColor(arrColor),
 									borderColor: colorBorder(arrColor),
 								}}
-							></div>
+							>
+								<Content
+									arrColor={arrColor}
+									section='five__next'
+									info={dataPageInfo[arrPage[4]]}
+								/>
+							</div>
 							<div className={styles.block__six}>
 								<div
 									className={styles.six__next}
@@ -95,7 +108,13 @@ const App: FC = () => {
 										backgroundColor: roadColor(arrColor),
 										borderColor: colorBorder(arrColor),
 									}}
-								></div>
+								>
+									<Content
+										arrColor={arrColor}
+										section='six__next'
+										info={dataPageInfo[arrPage[5]]}
+									/>
+								</div>
 								<div className={styles.block__seven}>
 									<div className={styles.block__all}></div>
 									<div
@@ -104,7 +123,13 @@ const App: FC = () => {
 											backgroundColor: roadColor(arrColor),
 											borderColor: colorBorder(arrColor),
 										}}
-									></div>
+									>
+										<Content
+											arrColor={arrColor}
+											section='seven__next'
+											info={dataPageInfo[arrPage[6]]}
+										/>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -114,7 +139,13 @@ const App: FC = () => {
 								backgroundColor: roadColor(arrColor),
 								borderColor: colorBorder(arrColor),
 							}}
-						></div>
+						>
+							<Content
+								arrColor={arrColor}
+								section='four__next'
+								info={dataPageInfo[arrPage[3]]}
+							/>
+						</div>
 					</div>
 					<div
 						className={styles.three__next}
@@ -122,7 +153,13 @@ const App: FC = () => {
 							backgroundColor: roadColor(arrColor),
 							borderColor: colorBorder(arrColor),
 						}}
-					></div>
+					>
+						<Content
+							arrColor={arrColor}
+							section='three__next'
+							info={dataPageInfo[arrPage[2]]}
+						/>
+					</div>
 				</div>
 			</div>
 		</div>
