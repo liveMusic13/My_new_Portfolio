@@ -1,9 +1,18 @@
 import cn from 'clsx';
 import { FC } from 'react';
 import useStyle from '../../hooks/useStyle';
+import { IPropsContent } from '../../types/PropsContent.types';
 import styles from './Content.module.scss';
 
-const Content: FC = ({ info, section, arrColor }) => {
+const Content: FC<IPropsContent> = ({
+	info,
+	section,
+	arrColor,
+	setArrColor,
+	moveText,
+	setNextAnim,
+	nextAnim,
+}) => {
 	const { colorH2, colorText, colorBorder, roadColor } = useStyle();
 
 	return (
@@ -52,6 +61,7 @@ const Content: FC = ({ info, section, arrColor }) => {
 					>
 						{info.h2}
 					</h2>
+
 					<ul style={{ color: colorText(arrColor) }}>
 						<li>
 							-{' '}
@@ -145,7 +155,19 @@ const Content: FC = ({ info, section, arrColor }) => {
 						<div className={styles.view}>
 							<p>Далее</p>
 						</div>
-						<button>&#8658;</button>
+						<button
+							onClick={() => {
+								if (setNextAnim) setNextAnim(!nextAnim);
+								if (moveText) moveText();
+								if (arrColor !== 6) {
+									if (setArrColor) setArrColor(prev => prev + 1);
+								} else {
+									if (setArrColor) setArrColor(0);
+								}
+							}}
+						>
+							&#8658;
+						</button>
 					</>
 				)}
 			</div>

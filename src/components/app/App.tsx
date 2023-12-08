@@ -1,15 +1,16 @@
 import { FC, useEffect, useState } from 'react';
 import dataPageInfo from '../../dataPageInfo';
 import useStyle from '../../hooks/useStyle';
+import CheckPage from '../check-page/CheckPage';
 import Content from '../content/Content';
 import styles from './App.module.scss';
 
 const App: FC = () => {
-	const [nextAnim, setNextAnim] = useState(false);
-	const [arrPage, setArrPage] = useState([0, 1, 2, 3, 4, 5, 6]);
+	const [nextAnim, setNextAnim] = useState<boolean>(false);
+	const [arrPage, setArrPage] = useState<number[]>([0, 1, 2, 3, 4, 5, 6]);
 	console.log(nextAnim);
 
-	const [arrColor, setArrColor] = useState(0);
+	const [arrColor, setArrColor] = useState<number>(0);
 
 	const { roadColor, colorBorder } = useStyle();
 
@@ -54,10 +55,15 @@ const App: FC = () => {
 					borderColor: colorBorder(arrColor),
 				}}
 			>
+				{arrColor !== 0 && <CheckPage arrColor={arrColor} arrPage={arrPage} />}
 				<Content
 					arrColor={arrColor}
 					section='main'
 					info={dataPageInfo[arrPage[0]]}
+					setNextAnim={setNextAnim}
+					nextAnim={nextAnim}
+					moveText={moveText}
+					setArrColor={setArrColor}
 				/>
 			</div>
 			<div

@@ -1,0 +1,34 @@
+@import '../../assets/styles/variables';
+
+.wrapper {
+	position: absolute;
+	top: 27.8%;
+	left: -15%;
+	display: flex;
+	gap: 15%;
+	width: 35%;
+	transform: rotate(90deg);
+
+	> .block__page {
+		display: flex;
+		gap: 25%;
+
+		> p {
+			font-size: 0.5em;
+		}
+	}
+
+	> .block__dots {
+		display: flex;
+		align-items: center;
+		gap: 12%;
+		width: 100%;
+
+		> .dot {
+			background-color: $color_two;
+			border-radius: 50%;
+			width: 0.1em;
+			height: 0.1em;
+		}
+	}
+}
