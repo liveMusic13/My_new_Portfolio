@@ -150,7 +150,15 @@ const Content: FC = ({ info, section, arrColor }) => {
 				)}
 			</div>
 
-			<div className={styles.arrow__next}>&#10230;</div>
+			<div
+				className={styles.arrow__next}
+				style={{
+					backgroundColor: colorBorder(arrColor),
+					color: roadColor(arrColor),
+				}}
+			>
+				&#10230;
+			</div>
 		</div>
 	);
 };

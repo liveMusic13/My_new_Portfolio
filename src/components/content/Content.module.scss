@@ -54,7 +54,7 @@
 	aspect-ratio: 1/1;
 
 	> div.arrow__next {
-		@include arrow-next(1em, -90deg, 8vw, 0.15%);
+		@include arrow-next(1em, -90deg, 6vw, 0.15%);
 	}
 
 	@include content(
@@ -84,7 +84,7 @@
 	aspect-ratio: 1/1;
 
 	> div.arrow__next {
-		@include arrow-next(0.8em, -90deg, 4vw, 0.15%);
+		@include arrow-next(0.8em, -90deg, 3vw, 0.15%);
 	}
 
 	@include content(
@@ -114,7 +114,7 @@
 	aspect-ratio: 1/1;
 
 	> div.arrow__next {
-		@include arrow-next(0.5em, -90deg, 2.5vw, 0.15%);
+		@include arrow-next(0.4em, -90deg, 1.5vw, 0.15%);
 	}
 
 	@include content(
@@ -144,7 +144,7 @@
 	aspect-ratio: 1/1;
 
 	> div.arrow__next {
-		@include arrow-next(0.3em, -90deg, 1.5vw, 0.06%);
+		@include arrow-next(0.25em, -90deg, 1vw, 0.06%);
 	}
 
 	@include content(
@@ -174,7 +174,7 @@
 	aspect-ratio: 1/1;
 
 	> div.arrow__next {
-		@include arrow-next(0.2em, -90deg, 1vw, 0.06%);
+		@include arrow-next(0.15em, -90deg, 0.65vw, 0.06%);
 	}
 
 	@include content(
@@ -204,7 +204,7 @@
 	aspect-ratio: 1/1;
 
 	> div.arrow__next {
-		@include arrow-next(0.1em, -90deg, 0.5vw, 0%);
+		@include arrow-next(0.1em, -90deg, 0.35vw, 0%);
 	}
 
 	@include content(
