@@ -55,3 +55,21 @@
 		border-radius: 0%;
 	}
 }
+
+@keyframes viewPreviewInfo {
+	from {
+		width: 0em;
+	}
+	to {
+		width: 13em;
+	}
+}
+
+@keyframes viewPreviewInfoReset {
+	from {
+		width: 13em;
+	}
+	to {
+		width: 0em;
+	}
+}

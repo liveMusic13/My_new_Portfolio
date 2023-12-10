@@ -42,7 +42,9 @@
 		//block-view
 		70%,
 		//padding-h2-and-view
-		1em //fontSize-h2-menu
+		1em,
+		//fontSize-h2-menu
+		$preview-display-true // preview-display
 	);
 }
 
@@ -72,7 +74,8 @@
 		$button-display-false,
 		$view-display-false,
 		70%,
-		0.6em
+		0.6em,
+		$preview-display-false
 	);
 }
 
@@ -102,7 +105,8 @@
 		$button-display-false,
 		$view-display-false,
 		70%,
-		0.4em
+		0.4em,
+		$preview-display-false
 	);
 }
 
@@ -132,7 +136,8 @@
 		$button-display-false,
 		$view-display-false,
 		70%,
-		0.24em
+		0.24em,
+		$preview-display-false
 	);
 }
 
@@ -162,7 +167,8 @@
 		$button-display-false,
 		$view-display-false,
 		70%,
-		0.14em
+		0.14em,
+		$preview-display-false
 	);
 }
 
@@ -192,7 +198,8 @@
 		$button-display-false,
 		$view-display-false,
 		70%,
-		0.1em
+		0.1em,
+		$preview-display-false
 	);
 }
 
@@ -222,6 +229,7 @@
 		$button-display-false,
 		$view-display-false,
 		70%,
-		0.02em
+		0.02em,
+		$preview-display-false
 	);
 }

@@ -1,0 +1,102 @@
+@import '../../assets/styles/variables';
+
+.wrapper {
+	background-color: $background_two;
+	position: absolute;
+	z-index: 1;
+	width: 100.4%;
+	height: 100.4%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	background-color: $background_seven;
+
+	&::-webkit-scrollbar {
+		width: 0.5em;
+		background-color: $background_seven;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: $color_six;
+		border-radius: 0.3em;
+	}
+
+	> .block__image {
+		position: relative;
+		display: grid;
+		grid-template-columns: 70% 30%;
+		align-items: center;
+		background-color: $background_seven;
+		padding-top: 1%;
+
+		cursor: url('./images/test3.png'), auto;
+
+		@media (max-width: 2000px) {
+			cursor: url('./images/test2.png'), auto;
+		}
+
+		@media (max-width: 1000px) {
+			cursor: url('./images/test.png'), auto;
+		}
+
+		> .block__left {
+			margin-left: 3%;
+
+			> .neznaika {
+				width: 100%;
+			}
+
+			> .block__agregator {
+				> .agregator_white {
+					width: 49.5%;
+				}
+				> .agregator_dark {
+					width: 49.5%;
+					margin-left: 1%;
+				}
+			}
+		}
+
+		> .block__farm {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			> .Farm {
+				width: 88%;
+			}
+
+			> .Farm1 {
+				width: 88%;
+			}
+			> .Farm2 {
+				width: 88%;
+			}
+		}
+	}
+
+	> .block__content {
+		padding: 8% 10%;
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
+
+		> .line {
+			width: 100%;
+			height: 2px;
+			background-color: $background_two;
+		}
+	}
+}
+
+img {
+	border-radius: 2%;
+	box-shadow: 0px 0px 30px $color_six;
+}
+.cursor__image {
+	width: 55px;
+	height: 55px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99;
+}

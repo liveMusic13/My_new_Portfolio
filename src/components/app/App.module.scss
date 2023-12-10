@@ -5,6 +5,7 @@
 	display: grid;
 	grid-template-columns: 62% 38%;
 	height: 100%;
+	position: relative;
 
 	> .main {
 		border: 1px solid $color_two;

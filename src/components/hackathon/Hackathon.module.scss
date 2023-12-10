@@ -1,0 +1,62 @@
+@import '../../assets/styles/variables';
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 30% 67%;
+	gap: 3%;
+	color: $background_two;
+
+	> .block__title {
+		> h2 {
+			font-size: 2em;
+			font-weight: 900;
+		}
+
+		> .block__team {
+			display: flex;
+			gap: 2%;
+			margin-top: 2%;
+
+			> p {
+				font-size: 0.7em;
+				font-weight: 700;
+			}
+
+			> ul {
+				margin-top: 0.2%;
+
+				> li {
+					font-weight: 700;
+					font-size: 0.7em;
+					text-decoration: underline;
+					margin-bottom: 3%;
+
+					&:last-child {
+						margin-bottom: 0px;
+					}
+				}
+			}
+		}
+	}
+
+	> .block__description {
+		> .description {
+			font-size: 1em;
+			margin-bottom: 1.5%;
+		}
+
+		> .stackProject {
+			font-weight: 500;
+			margin-bottom: 1.5%;
+		}
+
+		> .link__project {
+			color: $background_two;
+			text-decoration: underline;
+
+			&:hover {
+				color: $color_six;
+			}
+		}
+	}
+}

@@ -1,8 +1,10 @@
 import { FC, useEffect, useState } from 'react';
 import dataPageInfo from '../../dataPageInfo';
+import { useDetailPage } from '../../hooks/useDetailPage';
 import useStyle from '../../hooks/useStyle';
 import CheckPage from '../check-page/CheckPage';
 import Content from '../content/Content';
+import DetailPage from '../detail-page/DetailPage';
 import styles from './App.module.scss';
 
 const App: FC = () => {
@@ -13,6 +15,7 @@ const App: FC = () => {
 	const [arrColor, setArrColor] = useState<number>(0);
 
 	const { roadColor, colorBorder } = useStyle();
+	const { isViewDetailPage } = useDetailPage();
 
 	const moveText = () => {
 		const nextArrPage = arrPage.map(index => (index + 1) % dataPageInfo.length);
@@ -48,6 +51,7 @@ const App: FC = () => {
 			className={styles.wrapper}
 			style={nextAnim ? { animation: 'animNext 100ms linear 1' } : {}}
 		>
+			{isViewDetailPage && <DetailPage />}
 			<div
 				className={styles.main}
 				style={{

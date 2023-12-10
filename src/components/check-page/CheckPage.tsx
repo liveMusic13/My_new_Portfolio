@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import useStyle from '../../hooks/useStyle';
-import { IPropsCheckPage } from '../../types/CheckPage.types';
+import { IPropsCheckPage } from '../../types/checkPage.types';
 import styles from './CheckPage.module.scss';
 
 const CheckPage: FC<IPropsCheckPage> = ({ arrColor, arrPage }) => {

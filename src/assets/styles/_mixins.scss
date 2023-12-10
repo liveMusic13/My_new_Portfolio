@@ -1,4 +1,5 @@
 @import './variables';
+@import './animations';
 
 @mixin content(
 	$fz-text,
@@ -15,7 +16,8 @@
 	$button-display,
 	$view-display,
 	$padding-h2-and-view,
-	$fz-h2-menu
+	$fz-h2-menu,
+	$preview-display
 ) {
 	> .page__name {
 		font-weight: 700;
@@ -78,10 +80,30 @@
 		justify-self: end;
 		padding: 0px 20% 20% 0px;
 		align-self: center;
+		display: $preview-display;
+
+		> .image_preview {
+			width: 0em;
+			transform: translateX(-100%);
+			transition: transform 400ms linear;
+		}
 
 		&:hover {
 			cursor: pointer;
+
+			> .image_preview {
+				display: $preview-display;
+				width: 13em;
+				animation: viewPreviewInfo 300ms linear 1;
+				transform: translateX(0%);
+			}
 		}
+
+		// &:not(:hover) { TODO: РАЗОБРАТЬСЯ КАК СКРЫТЬ ИСЧЕЗАНИЕ БЛОКА ПРИ ОТКРЫТИИ СТРАНИЦЫ С ХАКАТОНАМИ
+		// 	> .image_preview {
+		// 		animation: viewPreviewInfoReset 300ms linear 1;
+		// 	}
+		// }
 
 		> .view {
 			display: $view-display;
