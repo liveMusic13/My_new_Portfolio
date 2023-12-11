@@ -1,22 +1,30 @@
 import { FC } from 'react';
+import { useAuthors } from '../../hooks/useAuthors';
 import { useDetailPage } from '../../hooks/useDetailPage';
 import { IDetailPage } from '../../types/detailPageProps.types';
+import Contact from '../contact/Contact';
 import Hackathon from '../hackathon/Hackathon';
 import Projects from '../projects/Projects';
+import Skills from '../skills/Skills';
 import styles from './DetailPage.module.scss';
 
 const DetailPage: FC<IDetailPage> = ({ arrColor }) => {
 	const { setIsViewDetailPage } = useDetailPage();
+	const { isAuthor, setIsAuthor } = useAuthors();
 
 	return (
 		<div
 			className={
-				arrColor === 3
+				arrColor === 2
+					? styles.wrapper_skills
+					: arrColor === 3
 					? styles.wrapper_scan
 					: arrColor === 4
 					? styles.wrapper_kanban
 					: arrColor === 5
 					? styles.wrapper_HOTD
+					: arrColor === 6
+					? styles.wrapper_contact
 					: styles.wrapper
 			}
 		>
@@ -24,7 +32,16 @@ const DetailPage: FC<IDetailPage> = ({ arrColor }) => {
 				className={styles.block__image}
 				onClick={() => setIsViewDetailPage(false)}
 				style={
-					arrColor === 3
+					arrColor === 2
+						? {
+								backgroundColor: 'rgb(255, 218, 68)',
+								gridTemplateColumns: '100%',
+								alignItems: 'center',
+								justifyContent: 'center',
+								width: '100%',
+								// height: '80%',
+						  }
+						: arrColor === 3
 						? { gridTemplateColumns: '53% 47%' }
 						: arrColor === 4
 						? {
@@ -79,7 +96,7 @@ const DetailPage: FC<IDetailPage> = ({ arrColor }) => {
 						</div>
 					</>
 				) : arrColor === 2 ? (
-					'2'
+					<Skills />
 				) : arrColor === 3 ? (
 					<>
 						<img
@@ -189,7 +206,10 @@ const DetailPage: FC<IDetailPage> = ({ arrColor }) => {
 				)}
 			</div>
 
-			<div className={styles.block__content}>
+			<div
+				className={styles.block__content}
+				// style={arrColor === 2 ? { display: 'none' } : {}}
+			>
 				{arrColor === 1 ? (
 					<>
 						<Hackathon hackathon='2' />
@@ -198,6 +218,15 @@ const DetailPage: FC<IDetailPage> = ({ arrColor }) => {
 						<div className={styles.line}></div>
 						<Hackathon hackathon='3' />
 					</>
+				) : arrColor === 2 ? (
+					<>
+						<button
+							className={styles.button__authors}
+							onClick={() => setIsAuthor(!isAuthor)}
+						>
+							Источники иконок
+						</button>
+					</>
 				) : arrColor === 3 ? (
 					<Projects project='scan' />
 				) : arrColor === 4 ? (
@@ -205,7 +234,7 @@ const DetailPage: FC<IDetailPage> = ({ arrColor }) => {
 				) : arrColor === 5 ? (
 					<Projects project='HOTD' />
 				) : (
-					''
+					<Contact />
 				)}
 			</div>
 		</div>

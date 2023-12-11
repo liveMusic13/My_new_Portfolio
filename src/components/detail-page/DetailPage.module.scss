@@ -97,6 +97,62 @@
 	}
 }
 
+.wrapper_skills {
+	background-color: $color_two;
+	position: absolute;
+	z-index: 1;
+	width: 101.4%;
+	height: 101.4%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	background-color: $background_three;
+	align-self: center;
+	justify-self: center;
+	animation: viewDetailPage 400ms linear 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	&::-webkit-scrollbar {
+		width: 0.5em;
+		background-color: $background_three;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: $color_two;
+		border-radius: 0.3em;
+	}
+}
+
+.wrapper_contact {
+	background-color: $background_two;
+	position: absolute;
+	z-index: 1;
+	width: 101.4%;
+	height: 101.4%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	background-color: $background_three;
+	align-self: center;
+	justify-self: center;
+	animation: viewDetailPage 400ms linear 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	&::-webkit-scrollbar {
+		width: 0.5em;
+		background-color: $background_three;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: $color_two;
+		border-radius: 0.3em;
+	}
+}
+
 .block__image {
 	position: relative;
 	display: grid;
@@ -194,11 +250,26 @@
 	display: flex;
 	flex-direction: column;
 	gap: 2em;
+	position: relative;
 
 	> .line {
 		width: 100%;
 		height: 2px;
 		background-color: $background_two;
+	}
+
+	> .button__authors {
+		position: absolute;
+		z-index: 99;
+		bottom: -40%;
+		right: 0;
+		background-color: rgba($color: #000000, $alpha: 0);
+		font-size: 1em;
+		font-weight: 600;
+
+		&:hover {
+			cursor: pointer;
+		}
 	}
 }
 

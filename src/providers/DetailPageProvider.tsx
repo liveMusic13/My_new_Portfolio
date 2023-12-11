@@ -1,11 +1,9 @@
-import { createContext, useState } from 'react';
+import { FC, PropsWithChildren, createContext, useState } from 'react';
+import { IDetailPageView } from '../types/isViewDetailPage.types';
 
 export const DetailPageContext = createContext<IDetailPageView>(
 	{} as IDetailPageView
 );
-
-import { FC, PropsWithChildren } from 'react';
-import { IDetailPageView } from '../types/isViewDetailPage.types';
 
 const DetailPageProvider: FC<PropsWithChildren<unknown>> = ({ children }) => {
 	const [isViewDetailPage, setIsViewDetailPage] = useState<boolean>(false);

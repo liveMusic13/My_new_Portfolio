@@ -154,6 +154,8 @@ const Content: FC<IPropsContent> = ({
 							src={
 								arrColor === 1
 									? './images/hackathons/preview.jpg'
+									: arrColor === 2
+									? './images/preview_skills.jpg'
 									: arrColor === 3
 									? './images/scan/preview.jpg'
 									: arrColor === 4
