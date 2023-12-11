@@ -1,0 +1,14 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+
+.wrapper-scan {
+	@include projects($background_two, $color_five);
+}
+
+.wrapper-kanban {
+	@include projects($background_two, $color_three);
+}
+
+.wrapper-HOTD {
+	@include projects($background_two, $color_one);
+}

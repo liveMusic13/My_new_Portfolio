@@ -51,7 +51,7 @@ const App: FC = () => {
 			className={styles.wrapper}
 			style={nextAnim ? { animation: 'animNext 100ms linear 1' } : {}}
 		>
-			{isViewDetailPage && <DetailPage />}
+			{isViewDetailPage && <DetailPage arrColor={arrColor} />}
 			<div
 				className={styles.main}
 				style={{

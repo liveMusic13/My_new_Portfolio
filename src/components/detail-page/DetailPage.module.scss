@@ -1,4 +1,5 @@
 @import '../../assets/styles/variables';
+@import '../../assets/styles/animations';
 
 .wrapper {
 	background-color: $background_two;
@@ -9,6 +10,9 @@
 	overflow-y: scroll;
 	overflow-x: hidden;
 	background-color: $background_seven;
+	align-self: center;
+	justify-self: center;
+	animation: viewDetailPage 400ms linear 1;
 
 	&::-webkit-scrollbar {
 		width: 0.5em;
@@ -19,72 +23,182 @@
 		background-color: $color_six;
 		border-radius: 0.3em;
 	}
+}
 
-	> .block__image {
-		position: relative;
-		display: grid;
-		grid-template-columns: 70% 30%;
-		align-items: center;
-		background-color: $background_seven;
-		padding-top: 1%;
+.wrapper_scan {
+	background-color: $background_two;
+	position: absolute;
+	z-index: 1;
+	width: 100.4%;
+	height: 100.4%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	background-color: $background_nine;
+	align-self: center;
+	justify-self: center;
+	animation: viewDetailPage 400ms linear 1;
 
-		cursor: url('./images/test3.png'), auto;
+	&::-webkit-scrollbar {
+		width: 0.5em;
+		background-color: $background_nine;
+	}
 
-		@media (max-width: 2000px) {
-			cursor: url('./images/test2.png'), auto;
+	&::-webkit-scrollbar-thumb {
+		background-color: $color_five;
+		border-radius: 0.3em;
+	}
+}
+
+.wrapper_kanban {
+	background-color: $background_two;
+	position: absolute;
+	z-index: 1;
+	width: 100.4%;
+	height: 100.4%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	background-color: $background_six;
+	align-self: center;
+	justify-self: center;
+	animation: viewDetailPage 400ms linear 1;
+
+	&::-webkit-scrollbar {
+		width: 0.5em;
+		background-color: $background_six;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: $color_three;
+		border-radius: 0.3em;
+	}
+}
+
+.wrapper_HOTD {
+	background-color: $background_two;
+	position: absolute;
+	z-index: 1;
+	width: 100.4%;
+	height: 100.4%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	background-color: $background_five;
+	align-self: center;
+	justify-self: center;
+	animation: viewDetailPage 400ms linear 1;
+
+	&::-webkit-scrollbar {
+		width: 0.5em;
+		background-color: $background_five;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: $color_one;
+		border-radius: 0.3em;
+	}
+}
+
+.block__image {
+	position: relative;
+	display: grid;
+	grid-template-columns: 70% 30%;
+	align-items: center;
+	background-color: $background_seven;
+	padding-top: 1%;
+
+	cursor: url('./images/test3.png'), auto;
+
+	@media (max-width: 2000px) {
+		cursor: url('./images/test2.png'), auto;
+	}
+
+	@media (max-width: 1000px) {
+		cursor: url('./images/test.png'), auto;
+	}
+
+	> .block__left {
+		margin-left: 3%;
+
+		> .neznaika {
+			width: 100%;
 		}
 
-		@media (max-width: 1000px) {
-			cursor: url('./images/test.png'), auto;
-		}
-
-		> .block__left {
-			margin-left: 3%;
-
-			> .neznaika {
-				width: 100%;
+		> .block__agregator {
+			> .agregator_white {
+				width: 49.5%;
 			}
-
-			> .block__agregator {
-				> .agregator_white {
-					width: 49.5%;
-				}
-				> .agregator_dark {
-					width: 49.5%;
-					margin-left: 1%;
-				}
-			}
-		}
-
-		> .block__farm {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-
-			> .Farm {
-				width: 88%;
-			}
-
-			> .Farm1 {
-				width: 88%;
-			}
-			> .Farm2 {
-				width: 88%;
+			> .agregator_dark {
+				width: 49.5%;
+				margin-left: 1%;
 			}
 		}
 	}
 
-	> .block__content {
-		padding: 8% 10%;
+	> .block__farm {
 		display: flex;
 		flex-direction: column;
-		gap: 2em;
+		align-items: center;
 
-		> .line {
-			width: 100%;
-			height: 2px;
-			background-color: $background_two;
+		> .Farm {
+			width: 88%;
 		}
+
+		> .Farm1 {
+			width: 88%;
+		}
+		> .Farm2 {
+			width: 88%;
+		}
+	}
+
+	> .home__scan {
+		width: 100%;
+	}
+
+	> .block__right {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+
+		> img {
+			width: 100%;
+		}
+	}
+
+	> .home__kanban {
+		width: 100%;
+	}
+	> .block__right_kanban {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+
+		> img {
+			width: 100%;
+		}
+	}
+
+	> .block__left_HOTD {
+		> .home__HOTD {
+			width: 100%;
+		}
+	}
+	> .block__right_HOTD {
+		> .home__HOTD {
+			width: 100%;
+		}
+	}
+}
+
+.block__content {
+	padding: 8% 10%;
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+
+	> .line {
+		width: 100%;
+		height: 2px;
+		background-color: $background_two;
 	}
 }
 

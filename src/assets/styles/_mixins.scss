@@ -167,3 +167,40 @@
 		animation: arrowBorderRadiusReset 400ms linear 1;
 	}
 }
+
+@mixin projects($textColor, $hoverLink) {
+	color: $textColor;
+	display: grid;
+	grid-template-columns: 30% 68%;
+	gap: 2%;
+
+	> .block__title {
+		> h2 {
+			font-size: 2em;
+			font-weight: 900;
+			margin-bottom: 0.5em;
+		}
+		> p {
+			font-size: 0.7em;
+			font-weight: 700;
+		}
+	}
+	> .block__description {
+		> .description {
+			font-size: 1em;
+			margin-bottom: 1.5%;
+		}
+		> .stackProject {
+			font-weight: 600;
+			margin-bottom: 1.5%;
+		}
+		> .link__project {
+			color: $textColor;
+			text-decoration: underline;
+
+			&:hover {
+				color: $hoverLink;
+			}
+		}
+	}
+}

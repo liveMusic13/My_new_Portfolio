@@ -100,7 +100,7 @@ const Hackathon: FC<IHackathon> = ({ hackathon }) => {
 						? 'Мой стэк на данном проекте: Html, Scss, TypeScript, React, Vite, yarn, Git.'
 						: hackathon === '1'
 						? 'Мой стэк на данном проекте: Html, Scss, JavaScript, React, Vite, yarn, Git.'
-						: 'Мой стэк на данном проекте: Html, Scss, JavaScript, React, Vite, yarn, Git, axios, react-hook-form, react-router-dom.'}
+						: 'Мой стэк на данном проекте: Html, Scss, JavaScript, React, Redux Toolkit, Vite, yarn, Git, axios, react-hook-form, react-router-dom.'}
 				</p>
 				<a
 					className={styles.link__project}

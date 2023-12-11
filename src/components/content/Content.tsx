@@ -138,7 +138,30 @@ const Content: FC<IPropsContent> = ({
 					<>
 						<img
 							className={styles.image_preview}
-							src='./images/hackathons/preview.jpg'
+							style={
+								arrColor === 2
+									? { boxShadow: '0px 0px 30px rgb(11, 11, 11)' }
+									: arrColor === 3
+									? { boxShadow: '0px 0px 30px rgb(82, 190, 172)' }
+									: arrColor === 4
+									? { boxShadow: '0px 0px 30px rgb(106, 212, 255)' }
+									: arrColor === 5
+									? { boxShadow: '0px 0px 30px rgb(229, 33, 39)' }
+									: arrColor === 6
+									? { boxShadow: '0px 0px 30px rgb(219, 209, 183)' }
+									: {}
+							}
+							src={
+								arrColor === 1
+									? './images/hackathons/preview.jpg'
+									: arrColor === 3
+									? './images/scan/preview.jpg'
+									: arrColor === 4
+									? './images/kanban/preview.jpg'
+									: arrColor === 5
+									? './images/HOTD/preview.jpg'
+									: './images/hackathons/Farm.jpg'
+							}
 							alt='img'
 						/>
 						<div
