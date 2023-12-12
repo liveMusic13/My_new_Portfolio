@@ -165,11 +165,13 @@
 	cursor: no-drop;
 
 	@media (max-width: 2000px) {
-		cursor: url('./images/test2.png'), auto;
+		//cursor: url('./images/test2.png'), auto;
+		cursor: no-drop;
 	}
 
 	@media (max-width: 1000px) {
-		cursor: url('./images/test.png'), auto;
+		//cursor: url('./images/test.png'), auto;
+		cursor: no-drop;
 	}
 
 	> .block__left {
