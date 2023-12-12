@@ -281,7 +281,7 @@ const Content: FC<IPropsContent> = ({
 								if (setNextAnim) setNextAnim(!nextAnim);
 								if (moveText) moveText();
 								if (arrColor !== 6) {
-									if (setArrColor) setArrColor(prev => prev + 1);
+									if (setArrColor) setArrColor((prev: number) => prev + 1);
 								} else {
 									if (setArrColor) setArrColor(0);
 								}

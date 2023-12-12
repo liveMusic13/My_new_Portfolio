@@ -15,7 +15,7 @@ const CheckPage: FC<IPropsCheckPage> = ({ arrColor, arrPage }) => {
 			</div>
 
 			<div className={styles.block__dots}>
-				{arrPage.map(dot => {
+				{arrPage.map((dot: number) => {
 					return (
 						<div
 							key={dot}
