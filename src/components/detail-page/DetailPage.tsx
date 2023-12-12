@@ -208,7 +208,14 @@ const DetailPage: FC<IDetailPage> = ({ arrColor }) => {
 
 			<div
 				className={styles.block__content}
-				// style={arrColor === 2 ? { display: 'none' } : {}}
+				style={
+					arrColor === 6
+						? {
+								width: '100%',
+								height: '100%',
+						  }
+						: {}
+				}
 			>
 				{arrColor === 1 ? (
 					<>

@@ -162,7 +162,9 @@ const Content: FC<IPropsContent> = ({
 									? './images/kanban/preview.jpg'
 									: arrColor === 5
 									? './images/HOTD/preview.jpg'
-									: './images/hackathons/Farm.jpg'
+									: arrColor === 6
+									? './images/preview_contact.jpg'
+									: ''
 							}
 							alt='img'
 						/>
