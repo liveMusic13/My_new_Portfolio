@@ -133,7 +133,7 @@
 	height: 101.4%;
 	overflow-y: scroll;
 	overflow-x: hidden;
-	background-color: $background_three;
+	background-color: $color_seven;
 	align-self: center;
 	justify-self: center;
 	animation: viewDetailPage 400ms linear 1;
@@ -144,11 +144,11 @@
 
 	&::-webkit-scrollbar {
 		width: 0.5em;
-		background-color: $background_three;
+		background-color: $color_seven;
 	}
 
 	&::-webkit-scrollbar-thumb {
-		background-color: $color_two;
+		background-color: $background_one;
 		border-radius: 0.3em;
 	}
 }

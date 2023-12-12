@@ -1,0 +1,22 @@
+@import '../../assets/styles/variables';
+
+.wrapper {
+	position: relative;
+
+	> .block__exit {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 99;
+		width: 200px;
+		height: 200px;
+		//TODO: СДЕЛАТЬ КРЕСТИК
+		&::before {
+			content: ''; // Добавьте это свойство
+			position: absolute;
+			height: 2px;
+			width: 50px;
+			background-color: $background_two;
+		}
+	}
+}
