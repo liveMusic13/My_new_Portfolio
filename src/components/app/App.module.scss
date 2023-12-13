@@ -7,6 +7,10 @@
 	height: 100%;
 	position: relative;
 
+	@media (max-width: 800px) {
+		grid-template-columns: 1fr;
+	}
+
 	> .main {
 		border: 1px solid $color_two;
 		aspect-ratio: 1/1;

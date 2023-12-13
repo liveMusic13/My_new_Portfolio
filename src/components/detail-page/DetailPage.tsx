@@ -39,7 +39,6 @@ const DetailPage: FC<IDetailPage> = ({ arrColor }) => {
 								alignItems: 'center',
 								justifyContent: 'center',
 								width: '100%',
-								// height: '80%',
 						  }
 						: arrColor === 3
 						? { gridTemplateColumns: '53% 47%' }

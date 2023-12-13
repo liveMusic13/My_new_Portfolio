@@ -94,9 +94,18 @@ body {
 	@media (max-width: 1000px) {
 		font-size: 12px;
 	}
+
+	@media (max-width: 800px) {
+		overflow-y: scroll;
+	}
 }
 
 #root {
 	width: 75%;
 	aspect-ratio: 12.936/8;
+
+	@media (max-width: 800px) {
+		aspect-ratio: 1/ 1;
+		margin-top: -50%;
+	}
 }
