@@ -161,14 +161,17 @@
 	background-color: $background_seven;
 	padding-top: 1%;
 
-	cursor: url('./images/test3.png'), auto;
+	// cursor: url('./images/test3.png'), auto; при разворачивании в vercel не работет, поэтому поставлю стандартный курсор.
+	cursor: no-drop;
 
 	@media (max-width: 2000px) {
-		cursor: url('./images/test2.png'), auto;
+		//cursor: url('./images/test2.png'), auto;
+		cursor: no-drop;
 	}
 
 	@media (max-width: 1000px) {
-		cursor: url('./images/test.png'), auto;
+		//cursor: url('./images/test.png'), auto;
+		cursor: no-drop;
 	}
 
 	> .block__left {
