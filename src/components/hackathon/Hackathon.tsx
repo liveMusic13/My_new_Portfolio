@@ -109,7 +109,7 @@ const Hackathon: FC<IHackathon> = ({ hackathon }) => {
 							? 'https://github.com/liveMusic13/Hackathon_ECSMO.git'
 							: hackathon === '1'
 							? 'https://github.com/liveMusic13/Hakaton_RSXB_Remake.git'
-							: 'https://github.com/liveMusic13/Megahackathon_T17.git'
+							: 'https://github.com/liveMusic13/Megahackaton_remake.git'
 					}
 				>
 					Код проекта на GitHub
