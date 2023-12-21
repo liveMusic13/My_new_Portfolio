@@ -26,14 +26,23 @@ const Skills: FC = () => {
 
 	return (
 		<div className={styles.wrapper}>
-			{arrImage.map(img => {
-				return (
-					<div className={styles.block__image}>
-						<img className={styles.image} src={img.src} alt='img' />
-						<p>{img.name}</p>
-					</div>
-				);
-			})}
+			<div className={styles.block__certificate}>
+				<img src='./images/certificate/skillfactory.jpg' alt='img' />
+				<img src='./images/certificate/NEZNAIKA.jpg' alt='img' />
+				<img src='./images/certificate/MEGA.jpg' alt='img' />
+				<img src='./images/certificate/РСХБ.jpg' alt='img' />
+			</div>
+			<div className={styles.block__skills}>
+				{arrImage.map(img => {
+					return (
+						<div className={styles.block__image}>
+							<img className={styles.image} src={img.src} alt='img' />
+							<p>{img.name}</p>
+						</div>
+					);
+				})}
+			</div>
+
 			{isAuthor && (
 				<div className={styles.block__authors}>
 					<a target='_blank' href='https://icons8.com/icon/20909/html-5'>

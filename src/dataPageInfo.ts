@@ -19,7 +19,7 @@ const dataPageInfo: IPageInfo[] = [
 		//yellow
 		id: 3,
 		pageName: 'skills',
-		h2: 'Мои навыки',
+		h2: 'Навыки и достижения',
 		text: 'Html, Css, Scss, JavaScript, TypeScript, React, Redux Toolkit, Webpack, Vite, Git, Adobe Photoshop, Figma',
 	},
 	{
