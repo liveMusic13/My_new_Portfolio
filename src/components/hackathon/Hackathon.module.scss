@@ -54,6 +54,17 @@
 		> .link__project {
 			color: $background_two;
 			text-decoration: underline;
+			display: block;
+
+			&:hover {
+				color: $color_six;
+			}
+		}
+		> .link__project_test {
+			color: $background_two;
+			text-decoration: underline;
+			display: block;
+			margin-bottom: 1.5%;
 
 			&:hover {
 				color: $color_six;

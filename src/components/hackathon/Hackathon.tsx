@@ -89,8 +89,9 @@ const Hackathon: FC<IHackathon> = ({ hackathon }) => {
 							языка и тратить время на решение новых ошибок не хотел.
 						</p>
 						<p className={styles.description}>
-							В данный момент работа по нему ещё продолжается, но основной
-							функционал уже работает.
+							К сожалению, мы не победили на данном хакатоне и после его
+							окончания, бэкэнд перестал работать. Поэтому я переписал код без
+							него + доделал то, что не успели за время хакатона.
 						</p>
 					</>
 				)}
@@ -102,6 +103,15 @@ const Hackathon: FC<IHackathon> = ({ hackathon }) => {
 						? 'Мой стэк на данном проекте: Html, Scss, JavaScript, React, Vite, yarn, Git.'
 						: 'Мой стэк на данном проекте: Html, Scss, JavaScript, React, Redux Toolkit, Vite, yarn, Git, axios, react-hook-form, react-router-dom.'}
 				</p>
+				{hackathon === '3' && (
+					<a
+						className={styles.link__project_test}
+						href='https://megahackaton-remake.vercel.app/'
+					>
+						Здесь можно попробовать приложение
+					</a>
+				)}
+
 				<a
 					className={styles.link__project}
 					href={
